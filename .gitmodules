@@ -1,0 +1,3 @@
+[submodule "DgEngine"]
+	path = DgEngine
+	url = git@github.com:int-Frank/DgEngine.git
