@@ -1,4 +1,4 @@
-  project "Demo"
+  project "Terrain"
     kind "ConsoleApp"
     targetdir ("%{wks.location}/build/%{prj.name}-%{cfg.buildcfg}")
     objdir ("%{wks.location}/build/intermediate/%{prj.name}-%{cfg.buildcfg}")
