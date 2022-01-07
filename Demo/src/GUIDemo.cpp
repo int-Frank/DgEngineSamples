@@ -6,7 +6,7 @@
 #include "System_Input.h"
 
 #include "GUI.h"
-#include "GUI_Container.h"
+#include "GUI_Window.h"
 #include "GUI_Button.h"
 #include "GUI_Text.h"
 #include "GUI_Checkbox.h"
@@ -35,7 +35,7 @@ void GUIDemo::BuildGUI()
   }
 
   // Main window
-  Container * pMainWindow = Container::Create(nullptr, {70.f, 40.f}, {735.f, 450.f});
+  Window * pMainWindow = Window::Create(nullptr, {70.f, 40.f}, {735.f, 450.f});
 
   //// Text wrapping options
   Checkbox *pChkbox = Checkbox::Create(pMainWindow, {12.0f, 60.0f}, true);
