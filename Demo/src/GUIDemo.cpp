@@ -35,19 +35,18 @@ void GUIDemo::BuildGUI()
   }
 
   // Main window
-  Window * pMainWindow = Window::Create(nullptr, {70.f, 40.f}, {735.f, 450.f});
+  Window * pMainWindow = Window::Create({70.f, 40.f}, {735.f, 450.f});
 
-  //// Text wrapping options
-  Checkbox *pChkbox = Checkbox::Create(pMainWindow, {12.0f, 60.0f}, true);
+  Checkbox *pChkbox = Checkbox::Create({12.0f, 60.0f}, true);
   pChkbox->BindCheckedChanged([](bool checked)
     {
       LOG_INFO("Checked = {0}", checked ? 1 : 0);
     });
 
-  SliderFloat *pSliderFloat = SliderFloat::Create(pMainWindow, vec2(20.0f, 100.0f), 100.0f, 0.0f, 42.0f, 1.0f, false);
-  SliderFloat *pSliderInt = SliderFloat::Create(pMainWindow, vec2(20.0f, 140.0f), 100.0f, 0, 5, 1, true);
+  SliderFloat *pSliderFloat = SliderFloat::Create(vec2(20.0f, 100.0f), 100.0f, 0.0f, 42.0f, 1.0f, false);
+  SliderFloat *pSliderInt = SliderFloat::Create(vec2(20.0f, 140.0f), 100.0f, 0, 5, 1, true);
 
-  Button * pBtnReset = Button::Create(nullptr, "Reset", {10.f, 10.f}, {70.f, 30.f});
+  Button * pBtnReset = Button::Create("Reset", {10.f, 10.f}, {70.f, 30.f});
   pBtnReset->BindSelect([]()
     {
       LOG_INFO("Pressed");
