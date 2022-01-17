@@ -46,13 +46,20 @@ void GUIDemo::BuildGUI()
   SliderFloat *pSliderFloat = SliderFloat::Create(vec2(20.0f, 100.0f), 100.0f, 0.0f, 42.0f, 1.0f, false);
   SliderFloat *pSliderInt = SliderFloat::Create(vec2(20.0f, 140.0f), 100.0f, 0, 5, 1, true);
 
-  Button * pBtnReset = Button::Create("Reset", {10.f, 10.f}, {70.f, 30.f});
+  Button *pBtnReset = Button::Create("Reset", {10.f, 10.f}, {70.f, 30.f});
   pBtnReset->BindSelect([]()
     {
-      LOG_INFO("Pressed");
+      LOG_INFO("Pressed 1");
+    });
+
+  Button *pBtnOut = Button::Create("Out", {750.f, 550.f}, {70.f, 30.f});
+  pBtnOut->BindSelect([]()
+    {
+      LOG_INFO("Pressed 2");
     });
 
   pMainWindow->Add(pBtnReset);
+  pMainWindow->Add(pBtnOut);
   pMainWindow->Add(pChkbox);
   pMainWindow->Add(pSliderFloat);
   pMainWindow->Add(pSliderInt);
