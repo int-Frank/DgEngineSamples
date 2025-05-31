@@ -134,8 +134,8 @@ void RenderDemo::OnAttach()
     m_va->SetVertexAttributeDivisor(2, 1);
 
     ShaderData * pSD = new ShaderData({
-      { ShaderDomain::Vertex, StrType::Source, g_vs },
-      { ShaderDomain::Fragment, StrType::Source, g_fs }
+      { ShaderDomain::Vertex, g_vs },
+      { ShaderDomain::Fragment, g_fs }
       });
 
     Ref<RendererProgram> refProg;
